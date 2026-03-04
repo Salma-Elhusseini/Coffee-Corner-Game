@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Coffe Corner Game</title>
+    <script
+      src="https://kit.fontawesome.com/c88c89023a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="line">
+        <div class="blue" style="background-color: #4285f4"></div>
+        <div class="red" style="background-color: #ea4335"></div>
+        <div class="yellow" style="background-color: #fbbc04"></div>
+        <div class="green" style="background-color: #34a853"></div>
+      </div>
+      <nav>
+        <div class="right-side">
+          <div class="circles">
+            <i class="fa-solid fa-circle" style="color: #4285f4"></i>
+            <i class="fa-solid fa-circle" style="color: #ea4335"></i>
+            <i class="fa-solid fa-circle" style="color: #fbbc04"></i>
+            <i class="fa-solid fa-circle" style="color: #34a853"></i>
+          </div>
+          <div class="logo">GDG<span>.Games</span></div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <h1><span class="G">G</span>D<span class="G">G</span>-Hints</h1>
+        <div class="line">
+          <div class="blue" style="background-color: #4285f4"></div>
+          <div class="red" style="background-color: #ea4335"></div>
+          <div class="yellow" style="background-color: #fbbc04"></div>
+          <div class="green" style="background-color: #34a853"></div>
+        </div>
+        <div class="play-box">
+          <div class="pointsBox">
+            Points: <span class="pointsNumber"></span>
+          </div>
+          <div id="hintBox"></div>
+
+          <input
+            type="text"
+            id="answerInput"
+            placeholder="Enter Your Answer"
+            required
+          />
+
+          <div class="btns">
+            <button id="submitBtn">Submit</button>
+            <button id="nextHintBtn">Next</button>
+          </div>
+        </div>
+      </div>
+      <div class="ramadan-kareem">
+        <span>Ramadan Kareem</span>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
