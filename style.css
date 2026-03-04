@@ -223,6 +223,18 @@ main .ramadan-kareem {
   margin-bottom: 25px;
   color: #fff;
 }
+.play-box .msg {
+  color: #fbbc04;
+  text-align: center;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.play-box .msg.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 .play-box button {
   background-color: #34a853;
   border: none;
@@ -251,3 +263,4 @@ main .ramadan-kareem {
   text-shadow: #fbbd04cb 1px 1px 2px;
   text-align: center;
 }
+
