@@ -24,8 +24,19 @@ const hintBox = document.getElementById("hintBox");
 const submitBtn = document.getElementById("submitBtn");
 const nextHintBtn = document.getElementById("nextHintBtn");
 const answerInput = document.getElementById("answerInput");
+const msg = document.querySelector(".msg");
 
 if (hintBox) {
+
+    function showMessage(text) {
+        msg.innerText = text;
+        msg.classList.add("show");
+
+        setTimeout(function () {
+            msg.innerText = "";
+            msg.classList.remove("show");
+        }, 3000);
+    }
 
     let currentHint = 0;
     const pointsSystem = [10, 8, 6, 4];
@@ -44,7 +55,7 @@ if (hintBox) {
 
     nextHintBtn.addEventListener("click", function () {
         if (currentHint >= gameData[0].hints.length - 1) {
-            alert("no more hints 😔");
+            showMessage("No more hints 😔");
             return;
         }
 
@@ -67,7 +78,7 @@ if (hintBox) {
     submitBtn.addEventListener("click", function () {
         const answer = answerInput.value.trim();
         if (answer === "") {
-            alert("where is your answer!")
+            showMessage("Where your answer!")
             return;
         }
 
