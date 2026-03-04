@@ -43,6 +43,17 @@ if (hintBox) {
         });
 
     nextHintBtn.addEventListener("click", function () {
+        if (currentHint >= gameData[0].hints.length - 1) {
+            alert("no more hints 😔");
+            return;
+        }
+
+        const confirmNext = confirm("Are you sure? Because your points will decrease.");
+
+        if (!confirmNext) {
+            return;
+        }
+
         currentHint++;
 
         if (currentHint < gameData[0].hints.length) {
@@ -56,6 +67,7 @@ if (hintBox) {
     submitBtn.addEventListener("click", function () {
         const answer = answerInput.value.trim();
         if (answer === "") {
+            alert("where is your answer!")
             return;
         }
 
