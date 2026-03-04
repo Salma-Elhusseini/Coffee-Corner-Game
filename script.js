@@ -85,19 +85,20 @@ if (hintBox) {
         const usedHintNumber = currentHint + 1;
         const points = pointsSystem[currentHint] || 0;
 
-        const resultData = {
-            name: player.name,
-            phone: player.phone,
-            committee: player.committee,
-            answer: answerInput.value,
-            hintUsed: usedHintNumber,
-            points: points
-        };
-        fetch("YOUR_GOOGLE_WEB_APP_URL", {
-            method: "POST",
-            body: JSON.stringify(resultData)
-        });
-
-        window.location.href = "end.html";
-    });
+fetch("https://script.google.com/macros/s/AKfycbyd-RkMZ1GA3KqlNvldB5zuHoT1F0GRECCJ4RaENKZdpTKLYNX6iHHQDiWQJnsvnUkB/exec", {
+  method: "POST",
+  mode: "no-cors",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(resultData)
+})
+.then(() => {
+  window.location.href = "end.html";
+})
+.catch(err => {
+  console.error("Submission failed:", err);
+  window.location.href = "end.html"; 
+});
 }
+
