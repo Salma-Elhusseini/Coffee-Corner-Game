@@ -85,7 +85,6 @@ if (hintBox) {
 
         fetch("https://script.google.com/macros/s/AKfycbyd-RkMZ1GA3KqlNvldB5zuHoT1F0GRECCJ4RaENKZdpTKLYNX6iHHQDiWQJnsvnUkB/exec", {
             method: "POST",
-            mode: "no-cors",
             headers: {
                 "Content-Type": "application/json"
             },
@@ -100,3 +99,4 @@ if (hintBox) {
         });
     });
 }
+
